@@ -11,5 +11,6 @@ console.log(str);
 console.log(str.charCodeAt(3));//give us a unicode value
 console.log("Shifa".concat (" Rabbnai"));
 console.log(str.endsWith('y'));
+console.log(str[4]);
 
  
