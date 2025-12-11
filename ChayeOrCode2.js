@@ -23,8 +23,8 @@ const hero2=[ " Kainat","Mehk"]
  hero1.push(hero2)
 console.log(hero1);
 
- const arr = hero1.concat(hero2)
- console.log(arr);
+ const Arr = hero1.concat(hero2)
+ console.log(Arr);
 
 const Array= hero1 + hero2
 console.log( Array);
