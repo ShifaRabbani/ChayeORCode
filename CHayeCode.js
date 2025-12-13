@@ -63,7 +63,7 @@ console.log(MyCreatedDate2.toLocaleString());
 console.log(MyCreatedDate3.toLocaleString());
 console.log(MyCreatedDate4.toLocaleString());
 
-// *******************Time Stamp**********************used for quizes etc give time in mili second
+// *******************Time Stamp*****used for quizes etc give time in mili second
 let myTimeStemp = Date.now()
 let myCreatedDate = new Date ("11-20-2002") 
 console.log(myTimeStemp);
