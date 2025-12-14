@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+ function myName(){  //myName is a reference And myName() is execute
+  a=8;
+  b=9;
+  myName=a+b
+  console.log(myName);
+ }
+   myName()  
+  
+  
+  function addTwoNum (Num1 , Num2){ // Num1 and Num2 are parameters
+    if(typeof Num1 !== 'number' || typeof Num2 !== 'number'){
+      console.log("Pleas enter number");
+    return;
+  }
+    console.log(Num1 + Num2);
+    console.log(Num1 - Num2);
+    console.log(Num1 * Num2);
+    console.log(Num1 / Num2);
+  }
+  
+  addTwoNum(3,8); //3 and 8 are arguments
+  addTwoNum(10,5);
+
+   function AddTwoNum(num1 , num2){
+    let result = num1 + num2
+    return result
+    // ********************OR******************
+    return num1 + num2
+   }
+   const result = AddTwoNum(4,5)  //return (result)alos stored in a variable
+   console.log("Result:",result);
+   
+
+  function LoginuserName (username = "Same"){ //when pass a value here the value never came a false
+    if(username === undefined){
+console.log("Pleas Ener a Username");
+return
+    }
+    return `${username}:Just Looged in `
+  }
+          const username = LoginuserName("Shifa")
+          console.log(username); 
+//Or
+  console.log(LoginuserName()); 
+  
+  
+  function calculatePrice(...num1){   //reset Operator
+     return num1
+  }
+console.log(calculatePrice(200,344,2211,34));
+
+const user ={
+  name:"Shifa",
+  price:899
+}
+function handleObj(anyObj){
+  console.log(`user name is ${ anyObj.name} and Price  is ${anyObj.price}` );
+  
+}
+handleObj(user)
+// Or *************pass in an objects**********************
+handleObj({
+  name:"Same",
+  price:909
+})
+//  *************pass in an Array**********************
+const myNewArray =[100,200,300]
+function retuArrayValue(getArray){
+  return getArray[4]
+}
+console.log(retuArrayValue(myNewArray));
+// OR
+
+console.log(retuArrayValue([22,354,765,435,54643,432]));
+
+
+    </script>
+</body>
+</html>
