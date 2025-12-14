@@ -66,7 +66,7 @@
 // console.log(MyCreatedDate3.toLocaleString());
 // console.log(MyCreatedDate4.toLocaleString());
 
-// *******************Time Stamp**********************used for quizes etc give time in mili second
+// *******************Time Stamp*****used for quizes etc give time in mili second
 let myTimeStemp = Date.now()
 let myCreatedDate = new Date ("11-20-2002") 
 // console.log(myTimeStemp);
@@ -92,3 +92,7 @@ let myCreatedDate = new Date ("11-20-2002")
     timeZone:"Asia/Karachi"
   })
   console.log(newDate);
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 768d1447440bf87f9efc927d10bdb06598c26c58
