@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JavaScript</title>
+</head>
+<body>
+    <script>
+      // Global Scope and Block Scope inside a  {} code , its mean that block scope and outside a code is called a global scope  
+       let a =78
+       if (true)  {
+       let a= 12;
+       const b= 13;
+    //    console.log("Block Scope",a);
+       
+       }
+    //    console.log("Global Scope",a);
+    //                    *********************Nested Scope********************
+    // function one(){
+    //     const name="Shifa"
+
+    //     function two(){
+    //     const website ="@Youtube"
+    //     console.log(name);
+        
+    //     }
+    //     // console.log(website);
+
+    //     two();
+    // }   
+    // one();
+    if(true){
+        const name ="Shifa"
+        if(name === "Shifa"){
+            const website = " @Youtube"
+            // console.log(name + website); 
+            
+        }
+        // console.log(website); //Erorr
+        
+    }
+    // console.log(name);     //Erorr
+    
+    // ********************************** Intersting *************************
+    console.log(addOne(5));
+    
+    function addOne (num){
+        return num +1
+    }
+    
+
+    // console.log(addTwo(7));// if we intilize here  this it give us an erorr becuse we store a variable before function
+
+    const addTwo =function(num){ // this method is called  a Hoisting
+        return num + 2
+    } 
+console.log(addTwo(7));
+    
+    </script>
+</body>
+</html>
