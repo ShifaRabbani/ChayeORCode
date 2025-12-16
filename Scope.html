@@ -12,24 +12,24 @@
        if (true)  {
        let a= 12;
        const b= 13;
-    //    console.log("Block Scope",a);
+       console.log("Block Scope",a);
        
        }
-    //    console.log("Global Scope",a);
-    //                    *********************Nested Scope********************
-    // function one(){
-    //     const name="Shifa"
+       console.log("Global Scope",a);
+                    //    *********************Nested Scope********************
+    function one(){
+        const name="Shifa"
 
-    //     function two(){
-    //     const website ="@Youtube"
-    //     console.log(name);
+        function two(){
+        const website ="@Youtube"
+        console.log(name);
         
-    //     }
-    //     // console.log(website);
+        }
+        // console.log(website);
 
-    //     two();
-    // }   
-    // one();
+        two();
+    }   
+    one();
     if(true){
         const name ="Shifa"
         if(name === "Shifa"){
@@ -37,10 +37,10 @@
             // console.log(name + website); 
             
         }
-        // console.log(website); //Erorr
+        console.log(website); //Erorr
         
     }
-    // console.log(name);     //Erorr
+    console.log(name);     //Erorr
     
     // ********************************** Intersting *************************
     console.log(addOne(5));

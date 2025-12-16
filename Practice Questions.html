@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // *********************************Plaindrome*************************************
+         const palindrome =()=> {
+
+      const str= prompt("Enter a String");
+   
+    const reverse = str .split('').reverse('').join('')
+ 
+     if(str === reverse){
+        console.log(`${str}:is Palindrome`);
+     }
+     else{(str !== reverse)
+        console.log(`${str}:is Not Palindrome`);
+     }
+};
+palindrome();
+        // *************************************Array*******************************
+        let arr =[10,20,30,40,50]
+let temp= new Array(arr.length)
+let j=0;
+sum =0;
+let max=arr[0]; //find max number
+let min=arr[0];//Find  min number
+for(i=arr.length-1;i>=0;i--){
+ temp[j] = arr[i]
+ j++;
+ sum = sum + arr[i]; //sum of this array
+ if(max <arr[i]){
+    max = arr[i];
+ }
+ if(min > arr[i]){
+    min = arr[i];
+ }
+}
+console.log(arr);
+console.log(temp);
+console.log(sum);
+console.log(max);
+console.log(min);
+
+    </script>
+</body>
+</html>
