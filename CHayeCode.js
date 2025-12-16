@@ -83,8 +83,6 @@ console.log(Math.floor(Date.now()/1000));
  console.log(newDate.getTimezoneOffset());
  console.log(newDate.getFullYear());
  
-
-
  
  
   newDate.toLocaleString('defaut',{
