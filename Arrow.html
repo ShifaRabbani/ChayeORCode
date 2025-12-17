@@ -56,6 +56,33 @@ console.log(name());
 
 console.log(addnum(5,8));
 
-    </script>
+            // *********** (IIFE) Immediatly Invoked Function Expressions************
+                //  A function that executes immediatly after its Defin 
+                // Create a new scope ,used for intilization Or setup Code
+                // Avoiding global variables Pollutions , 
+               ( function chai (){     //Named IIFE
+                    console.log("DB Connected"); 
+                })();
+                //  ()1st pranthesis dealare function deffinatio () 2nd one is for execution
+                
+                (() =>{
+                   console.log("Shfia Rabbnai");
+                   
+                })(); // this ; is important in this case OtherWise it will cause an erorr(and this is 
+                //                this is how we write a 2 Or 3 IIFE at a time)
+                // OR
+                (function IIFE() {   //Un named IIFE
+                   console.log("Chai OR Code");
+                   
+                })();
+                ((name) => {  // Parameter IIFE
+                    console.log(`Shifa Rabbnai Gundapur,${name}`);
+                    
+                })("BSCS 5th Semester");
+
+               
+            
+   
+   </script>
 </body>
 </html>
