@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Or Iteration</title>
+</head>
+<body>
+    <script>
+        //  basic struchure
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+            
+        // }
+
+
+        for(i=0;i<=10;i++){
+            const element = i;
+            if(element == 5 ){
+                console.log("5 is best number");
+                
+            }
+            console.log(i);
+        }
+
+        for (let i = 1; i <=10; i++) {
+          console.log(`Outer Loop ${i}`);
+          
+
+            for (let j = 1; j <= 10; j++) {
+          console.log(`Inner Loop ${j} and inner Lopp ${i}`);
+                
+                console.log( i + '*' + j + ' = ' + i*j);  
+            }
+        }
+
+        let myArray = ["Shifa" , "Laiba" ,"Waseela"]
+        for (let index = 0; index < myArray.length; index++) {
+            const element = myArray[index];
+            console.log(element);   
+        }
+         console.log(myArray);
+
+        // ***************Break and Continue *************
+        for (let index = 1 ; index <=20; index++) {
+            if(index == 5){
+                console.log('index 5');
+                break;
+            }
+            console.log(`vlaue of i is ${index}`);
+            }
+
+         for (let index = 1 ; index <=20; index++) {
+            if(index == 5){
+                console.log('index 5');
+                continue;
+            }
+            console.log(`vlaue of i is ${index}`);
+            }
+
+            // ************* while Loops********
+            let i = 0;
+            while (i <= 10){
+                console.log(`value of i is ${i}`);
+                i = i +2; 
+            }
+
+        let myArr = ["Shifa" , "Laiba" ,"Waseela"]
+        let arr= 0
+        while( arr < myArr.length){
+           console.log(`value is ${myArr[arr]}`);
+            arr ++; //or   arr = arr +1
+        }
+
+        // ******************Do while loop ****************
+    //   let score =11  // this is a speciall case becuse do while loop 1st check value then check the condition
+    let score =1
+      do{
+        console.log(`Score is ${score}`);
+        score ++;
+      }while(score <= 10);
+
+    </script>
+</body>
+</html> 
