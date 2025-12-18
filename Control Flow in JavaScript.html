@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow in JavaScript</title>
+</head>
+<body>
+    <script>
+        // *****************IF**********
+        //  === also check data-type
+
+        const userLoggedIn = true
+        const debitCard = true
+        const loggedInFromeGoogle =false
+        const LoggedInFromeEmail =true
+
+        if(userLoggedIn && debitCard){
+            console.log("Allow to buy course");
+
+        }
+        if(loggedInFromeGoogle || LoggedInFromeEmail){
+            console.log("User Logged in");
+            
+        }
+            //           ******************************* Switch *****************
+        // switch (key) {
+        //     case value:
+                
+        //         break;
+        
+        //     default:
+        //         break;
+        // }  
+
+           const month =Number( prompt("Enetr only a number From 1 to 4"))
+           switch (month) {
+            case 1:
+                console.log("January");
+                break;
+            case 2:
+                console.log("Februry");
+                break;
+            case 3:
+                console.log("March");
+                break;
+            case 4:
+                console.log("April");
+                break;
+            default:
+                console.log("Default Execution");
+                
+                break;
+           }
+        //    ***************************Truthi Or Falsy Values ***********************
+
+        //   ***** flasy values = false, 0 , -0 , BigInt , 0n, Null, undefine , NaN ,""
+        //   *****  Truthi Value = "0" , 'false' , " " ,[] , {} , function(){} empty function
+            
+        const userEmail = []
+        if (userEmail){
+            console.log("Got User Email");
+        }else {
+            console.log("Dont have user Eamil");
+    }
+            // check the falsy value 0
+        
+        if(userEmail.length === 0){
+            console.log("Array is empty"); 
+        }
+                    //    Check empty Object
+
+        const emptyObj ={}
+        if (Object.keys(emptyObj).length === 0){
+            console.log("Object is Empty");
+            
+        } 
+
+        // ****************************Nullish Coalescing Operator (??) null ,undefined
+    //   Used in special Data Base 
+      let val1
+      val1 =5 ?? 10   //Or
+        val1= null ?? 10   //or  Also called a flag values
+        val1 = undefined ?? 15
+      console.log(val1);
+      
+// ***********************************Turnary Operator
+ const iceTeaPrice =100
+ iceTeaPrice <= 80 ? console.log("Less then 80") :console.log("More then 80");
+ 
+   </script>
+</body>
+</html>
