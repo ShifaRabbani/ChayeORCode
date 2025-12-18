@@ -46,33 +46,43 @@ console.log(sum);
 console.log(max);
 console.log(min);
 //  ************************************ Online Shopping Discount***********************
-       const amount =[1000,300,500]
-       let sum=0
-       for(let i=0;i<amount.length;i++){
-          sum = sum + amount[i]
-       }
-        console.log(`Yor bill is ,${sum}`);
+       const amount =[]
+       let sum = 0;
 
+          alert("Enter a bill amount, Enter 0 to finish")
+          while(true){
+            let value = prompt("Enter a price :")
+
+            if( value === null || Number (value) === 0){
+               break; //Stope taking input
+            }
+            amount.push(Number(value));
+          }
+// Calculate the sum
+                for(let i=0; i<amount.length;i++){
+                  sum = sum + amount[i];
+                }
+                console.log(`Your Bill is ${sum.toFixed()}`);
+                
       //   Discount 
         const Discount = () => {
+      
          discount =0;
          let finalBill=0;
 
          if (sum >= 2000){
              discount = sum *10 / 100;
-              finalBill =sum - discount ;
-              console.log(`Your final bill is ${finalBill} , with 10% RS ${discount} rupees discount`);
-         }
+         }   
          else if (sum >= 1500) {
              discount = sum *5 / 100;
-              finalBill =sum - discount ;
-             console.log(`Your final bill is ${finalBill} , with 5% RS ${discount} rupees discount`);
+            
          }
-         else {(sum >=1000 )
+         else{ (sum >=1000 )
              discount = sum *3 / 100;
+             }
               finalBill =sum - discount ;
-            console.log(`Your final bill is ${finalBill}, with 3% RS ${discount} rupees discount`);
-         }
+            console.log(`Your final bill is ${finalBill.toFixed()}, with 3% RS ${discount.toFixed()} rupees discount`);
+         
         }
         Discount();
     </script>
