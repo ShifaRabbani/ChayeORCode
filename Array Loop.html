@@ -3,93 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>High Order Array Loop </title>
 </head>
 <body>
     <script>
-//         // *********************************Plaindrome*************************************
-         const palindrome =()=> {
+        // ******** For of loop ***********
+        const arr=[1,2,3,4,5]
 
-      const str= prompt("Enter a String");
-   
-    const reverse = str .split('').reverse('').join('')
- 
-     if(str === reverse){
-        console.log(`${str}:is Palindrome`);
-     }
-     else{(str !== reverse)
-        console.log(`${str}:is Not Palindrome`);
-     }
-};
-palindrome();
-        // *************************************Array*******************************
-        let arr =[10,20,30,40,50]
-let temp= new Array(arr.length)
-let j=0;
-sum =0;
-let max=arr[0]; //find max number
-let min=arr[0];//Find  min number
-for(i=arr.length-1;i>=0;i--){
- temp[j] = arr[i]
- j++;
- sum = sum + arr[i]; //sum of this array
- if(max <arr[i]){
-    max = arr[i];
- }
- if(min > arr[i]){
-    min = arr[i];
- }
-}
-console.log(arr);
-console.log(temp);
-console.log(sum);
-console.log(max);
-console.log(min);
-//  ************************************ Online Shopping Discount***********************
-       const amount =[]
-       let sum = 0;
-
-          alert("Enter a bill amount, Enter 0 to finish")
-          while(true){
-            let value = prompt("Enter a price :")
-
-            if( value === null || Number (value) === 0){
-               break; //Stope taking input
-            }
-            amount.push(Number(value));
-          }
-// Calculate the sum
-                for(let i=0; i<amount.length;i++){
-                  sum = sum + amount[i];
-                }
-                console.log(`Your Bill is ${sum.toFixed()}`);
-                
-      //   Discount 
-        const Discount = () => {
-      
-         discount =0;
-         let finalBill=0;
-
-         if (sum >= 2000){
-             discount = sum *10 / 100;
-         }   
-         else if (sum >= 1500) {
-             discount = sum *5 / 100;
-            
-         }
-         else{ (sum >=1000 )
-             discount = sum *3 / 100;
-             }
-              finalBill =sum - discount ;
-            console.log(`Your final bill is ${finalBill.toFixed()}, with 3% RS ${discount.toFixed()} rupees discount`);
-         
+        for (const num of arr) {
+            // console.log(num);
         }
-        Discount();
+        const greetings="Hello World"
+        for (const greet of greetings) {
+            if(greet === " ")
+            break;
+            //    continue
+            // console.log(`Each char is:${greet}`); 
+        }
+        // ******************** Map ************************
+        const map = new Map()     //map is also a object in JS,hold the key value pair, also remeber a order of the keys,
+        map.set('PK' , "Pakistan")
+        map.set('UK' , "United Kingdom")
+        map.set('AF' , "Afghanistan")
+        map.set('PK' , "Pakistan") //Takes only a unique values
+
+        // console.log(map);
+        for (const[ key , value] of map) {
+            // console.log(key ,':-' , value);
+        }
+
+// **************How to add a for of loop on a simple object
+const myObject = {
+    game1 : 'NFS',
+    game2 : 'SpiderMan'
+} 
+// for (const [ke , value] of myObject) {  //this for of loop not work here
+//     console.log(key , ':-' , value);
+// }
 
 
+const myObject1 ={
+    js : "JavaScript",
+    cpp : "C++",
+    rb : "Ruby",
+    swift : "Swift for Apple"
+}
+
+for (const key in myObject1) {
+    //   console.log(myObject1[key]);
+    //   console.log(`${key} shortCut is for ${myObject1[key]}`); 
+}
+
+const programing = ["js" , "rb" , "py" , 'java' , "cpp"]
+for (const key in programing) { 
+// console.log(key);   // the key of array is a numbers  So we are using this 
+// console.log(programing[key]);
+}
 
 
-  //                     ****************** Seat Allocation Coding Problem (Solved By DeepSeek)********************
+ const map1 = new Map()    //map is not itreate able so we can not use like this
+        map1.set('PK' , "Pakistan")
+        map1.set('UK' , "United Kingdom")
+        map1.set('AF' , "Afghanistan")
+        map1.set('PK' , "Pakistan") //Takes only a unique values
+
+        for (const[ key , value] in map1) {
+            // console.log(key ,':-' , value);
+        }
+        //    ************************ For Each Loop ******************
+        const coding = ["js" , "rb" , "cpp" , 'py' ,'java']
+        // coding.forEach( function (item) {
+        //     console.log(item);   
+        // } )   //OR
+
+        // coding.forEach ( (val) =>{
+        //  console.log(val);
+        // })    //OR
+
+        // function printMe (item) {
+        //     console.log(item);
+        // }
+        // coding.forEach(printMe)     //OR
+
+        // ****************** Also Prints ************
+        // coding.forEach((item , index , arr) => {
+        //     console.log(item,index,arr);
+        // })
+
+    
+//    ***************** Objects Inside Array how to access an object in arr  ***************
+        const myCoding =[
+            {
+                langaugeName : "JavaScript",
+                langaugeFileName : "Js"
+            }, 
+             {
+                langaugeName : "Java",
+                langaugeFileName : "Java"
+            }, 
+             {
+                langaugeName : "Python",
+                langaugeFileName : "py"
+            }, 
+        ]
+     myCoding.forEach ((item)=> {     //Mostly work in a dataBase
+    //    console.log(item.langaugeFileName);
+    //    console.log(item.langaugeName);
+       
+     });
+    //                     ****************** Seat Allocation Coding Problem********************
 
     let cinma = [
         [1,0,1,0],
