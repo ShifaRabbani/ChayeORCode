@@ -7,13 +7,13 @@
 </head>
 <body>
     <script>
-        // const coding = [43,5,23,12,45,67,89,"Shfia"]
-        // // for each can not return a value ,like this
-        // const values=coding.forEach((item) =>{
-        //     console.log(item);
-        //     return item;
-        // })
-        // console.log(values);
+        const coding = [43,5,23,12,45,67,89,"Shfia"]
+        // for each can not return a value ,like this
+        const values=coding.forEach((item) =>{
+            console.log(item);
+            return item;
+        })
+        console.log(values);
         
 
 
@@ -24,7 +24,7 @@
        const newNum = myNums.filter((num) => {
         return num > 4 ;
        })
-        // console.log(newNum);
+        console.log(newNum);
 
 
         const MyNums =[ 11,12,13,14,15,16,17,18,19,20]
@@ -35,7 +35,7 @@
             newnum.push(num)
           }
         })
-        // console.log(newnum);
+        console.log(newnum);
         
            //************this is how  a filter actually works *****************
         const Books =[
@@ -50,7 +50,7 @@
         userBook= Books.filter((bk) => { 
             return bk.publish >= 1981  && bk.genre ==="Fiction"
         })
-        // console.log(userBook);
+        console.log(userBook);
 
 
 
@@ -58,7 +58,7 @@
         const myNumbers = [11,22,33,44,55,66,77,88,99,110]
 
          const newNumbers=myNumbers.map( (num) => num + 5)
-            //  console.log(newNumbers);
+             console.log(newNumbers);
              
 // OR
             const Newnums = []
@@ -66,7 +66,7 @@
         num + 10
         Newnums.push(num)
            });
-        //   console.log(Newnums);
+          console.log(Newnums);
 
         //    ****************************chaining*********************
          const number = [1,2,3,4,5,6,7,8,9,10]
@@ -75,23 +75,23 @@
                            .map((num) => num -1)
                            .map((num) => num +2)
                            .filter((num) => num >= 40)   //filter is used for true fal se
-                // console.log(newnumber);
+                console.log(newnumber);
 
                 // ***************************** reduce ****************
 
 const myNum = [1,2,3,4,5]   
-// const myTotal = myNum.reduce(function (accumulaotr, currentValue){    //accumulator is a variabe that store a current valye
+// const myTotal = myNum.reduce(function (accumulaotr, currentValue){            //accumulator is a variabe that store a current valye
 // console.log(`accumulator:${accumulaotr} and  current value:${currentValue}`);
 
 
 // return accumulaotr + currentValue;
-// } ,0 ) //0 here we declare that accumulator initial value is 0 , and then accumulator store the currentvalue            
+// } ,0 )                       //0 here we declare that accumulator initial value is 0 , and then accumulator store the currentvalue            
 
 //  ************************* from a arrow function
 const myTotal =myNum.reduce(( accumulaotr , currentValue) => accumulaotr + currentValue ,0)
 
 
-// console.log(`myTotal amount  is : ${myTotal}`);
+console.log(`myTotal amount  is : ${myTotal}`);
 
 //       **************************Shopping cart *****************
 
