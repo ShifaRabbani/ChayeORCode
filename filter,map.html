@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters map and reduce in JS</title>
+</head>
+<body>
+    <script>
+        // const coding = [43,5,23,12,45,67,89,"Shfia"]
+        // // for each can not return a value ,like this
+        // const values=coding.forEach((item) =>{
+        //     console.log(item);
+        //     return item;
+        // })
+        // console.log(values);
+        
+
+
+
+        const myNums=[1,2,3,4,5,6,7,8,9,10]
+        // const newNum = myNums.filter( (num) => num > 4 )   //cal back function  (num) => num > 4 ) 
+       // or  (if we are using a { } we must be used a keyword return )
+       const newNum = myNums.filter((num) => {
+        return num > 4 ;
+       })
+        // console.log(newNum);
+
+
+        const MyNums =[ 11,12,13,14,15,16,17,18,19,20]
+
+        const newnum = []
+        MyNums.forEach((num ) => {
+          if (num > 14) {
+            newnum.push(num)
+          }
+        })
+        // console.log(newnum);
+        
+           //************this is how  a filter actually works *****************
+        const Books =[
+            {title: 'Book one' , genre: 'Fiction' , publish: 1981 , edition:2004},
+            {title: 'Book two' , genre: 'Non Fiction' , publish: 1990 , edition:2009},
+            {title: 'Book three' , genre: 'History' , publish: 1931 , edition:2000},
+            {title: 'Book four' , genre: 'Science' , publish: 1921 , edition:2009},
+            {title: 'Book five' , genre: 'Litrature' , publish: 1981 , edition:2005},
+            {title: 'Book six' , genre: 'Fiction' , publish: 1931 , edition:2007},
+        ];
+        let userBook = Books.filter((bk) => bk.genre === 'History' )
+        userBook= Books.filter((bk) => { 
+            return bk.publish >= 1981  && bk.genre ==="Fiction"
+        })
+        // console.log(userBook);
+
+
+
+        // **********************Map function*****************
+        const myNumbers = [11,22,33,44,55,66,77,88,99,110]
+
+         const newNumbers=myNumbers.map( (num) => num + 5)
+            //  console.log(newNumbers);
+             
+// OR
+            const Newnums = []
+           myNumbers.forEach((num) =>{
+        num + 10
+        Newnums.push(num)
+           });
+        //   console.log(Newnums);
+
+        //    ****************************chaining*********************
+         const number = [1,2,3,4,5,6,7,8,9,10]
+         const newnumber = number 
+                           .map((num) => num *10)
+                           .map((num) => num -1)
+                           .map((num) => num +2)
+                           .filter((num) => num >= 40)   //filter is used for true fal se
+                // console.log(newnumber);
+
+                // ***************************** reduce ****************
+
+const myNum = [1,2,3,4,5]   
+// const myTotal = myNum.reduce(function (accumulaotr, currentValue){    //accumulator is a variabe that store a current valye
+// console.log(`accumulator:${accumulaotr} and  current value:${currentValue}`);
+
+
+// return accumulaotr + currentValue;
+// } ,0 ) //0 here we declare that accumulator initial value is 0 , and then accumulator store the currentvalue            
+
+//  ************************* from a arrow function
+const myTotal =myNum.reduce(( accumulaotr , currentValue) => accumulaotr + currentValue ,0)
+
+
+// console.log(`myTotal amount  is : ${myTotal}`);
+
+//       **************************Shopping cart *****************
+
+const ShoppingCart =[
+    {
+        itemName : "Js course ",
+        price : 2900
+    },
+     {
+        itemName : "py course ",
+        price : 3000 
+    },
+     {
+        itemName : "app dev curse ",
+        price : 5000 
+    },
+     {
+        itemName : "c++ course",
+        price : 1500
+    },
+];
+const priceToPay = ShoppingCart.reduce( (acc ,item ) => acc + item.price, 0);
+
+console.log(priceToPay);
+
+      
+    </script>
+</body>
+</html>
