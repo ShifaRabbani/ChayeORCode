@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #ffffff;">
+    <div class="parent">
+    <div class="day">Monday</div>
+    <!-- this is for comment -->
+    <div class="day">Tuesday</div>
+    <div class="day">Thruday</div>
+    <div class="day">Friday</div>
+ </div>
+
+ <script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1]);
+    
+    //   for (let i=0; i<parent.children.length; i++) {
+    //    console.log(parent.children[i].innerHTML);
+    //   }
+    // OR
+    for (const i in parent.children.length) {
+    // console.log(parent.children[i].innerHTML);
+    } 
+    parent.children[1].style.color ='orange'
+    // console.log(parent.firstElementChild);   //Access 1st child
+    // console.log(parent.lastElementChild);      //Access last child
+
+ const dayOne= document.querySelector('.day')
+//  console.log(dayOne);
+//  console.log(dayOne.parentElement);   //Acees parent element
+//  console.log(dayOne.nextElementSibling);   //Acees siblings
+ 
+//  console.log("Nodes" , parent.childNodes);
+ // child node is a complete tree  struchure , count a line of code also count a next line and
+ //  also count a comment
+
+
+
+//  ******************* how to creat a Node list Programetly***********
+//     ***********  this is how wo generate a document,slect ,change
+   const h1=document.createElement('h1')
+   console.log(h1);
+   h1.className = 'main'
+   h1.id = Math.round(Math.random() * 10  + 1)
+ 
+   h1.setAttribute('title' , 'generated title')
+   h1.style.backgroundColor='purple'
+   h1.style.color='pink'
+   h1.style.padding='20px'
+//    h1.innerText="Shifa Rabbani"  // or
+   const addText = document.createTextNode("Shifa Rabbani Gundapour")
+   h1.appendChild( addText)
+
+   document.body.appendChild(h1)    //Now attach these all in to a documnet page
+   
+ </script>
+</body>
+</html>
