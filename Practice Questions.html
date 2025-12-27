@@ -5,8 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
+<body style="background-color: black; color: white;">
+   
+    <!-- // *************************************Chnge the text when click on a button*******************************     -->
+     <!-- <div style="text-align: center; align-items: center;padding: 100px;">
+        <h1>WellCome!</h1>
+        <button>click Me</button>
+     </div>-->
+
+   <!-- // *************************************Chnge the text when click on a button  2*******************************     -->
+<style>
+    .box{
+    align-items: center;
+      text-align: center;
+      padding: 100px;
+      
+
+   } 
+   #btn,#bttn {
+      display: none;
+   }
+   #button,.btn, .bttn{
+      background-color: green;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+      color: aliceblue;
+      cursor: pointer;
+      
+   }
+
+</style>
+<div class="box">
+   <button id="button">click Me!</button>
+   <p id="WellCome" ></p>
+   <button id="btn"></button>
+   <p id="msg"></p>
+   <button id="bttn"></button>
+
+
+
+
+</div>
+
+   <script> 
 //         // *********************************Plaindrome*************************************
 //          const palindrome =()=> {
 
@@ -231,6 +274,77 @@
 
 // console.log("Best seat is:", bestSeat); // Should be [1, 1]
 
-    </script>
-</body>
+
+
+  // *************************************Chnge the text when click on a button*******************************     --> -->
+   //   const WellCome= document.querySelector('h1')
+   //   const button = document.querySelector('button')
+   //   button.style.backgroundColor='green'
+   //   button.style.padding='15px'
+   //   button.style.border='green'
+   //   button.style.borderRadius='10px'
+   //   button.style.fontSize='15px'
+   //   button.style.color='white'
+   //   button.style.cursor='pointer'
+
+   //   button.addEventListener('click' , function(){
+   //      WellCome.innerHTML = "Have a Nice Day"
+   //   })
+    
+
+// *************************************Chnge the text when click on a button 2 *******************************     --> --
+const button=document.getElementById('button')
+const WellCome=document.getElementById('WellCome')
+const btn=document.getElementById('btn')
+const bttn=document.getElementById('bttn')
+// const msg=document.getElementById('msg')
+
+
+button.addEventListener('click' , function(){
+WellCome.innerHTML='WellCome';
+WellCome.style.backgroundColor='lightgreen';
+WellCome.style.color='black';
+WellCome.style.borderRadius='10px';
+WellCome.style.padding='15px';
+WellCome.style.margin='10px';
+WellCome.style.fontSize='30px ,bold';
+btn.innerHTML='Thank You!';
+btn.style.display='inline-block';
+btn.style.backgroundColor='green';  
+btn.style.padding='10px';
+btn.style.margin='10px';
+btn.style.borderRadius='5px';
+btn.style.border='none';
+btn.style.color='aliceblue';
+btn.style.cursor='pointer';
+
+})
+btn.addEventListener('click' , function(){
+msg.innerHTML='Have a Nice Day';
+msg.style.backgroundColor='lightgreen';
+msg.style.color='black';
+msg.style.borderRadius='10px';
+msg.style.padding='15px';
+msg.style.margin='10px';
+msg.style.fontSize='30px ,bold';
+
+
+bttn.innerHTML='click to reset!';
+bttn.style.backgroundColor='green';  
+bttn.style.padding='10px';
+bttn.style.margin='10px';
+bttn.style.borderRadius='5px';
+bttn.style.border='none';
+bttn.style.color='aliceblue';
+bttn.style.cursor='pointer';
+bttn.style.display='inline-block';
+
+})
+bttn.addEventListener('click' , function(){
+   document.body.remove();
+   location.reload();
+})
+
+     </script>
+     </body>
 </html>
