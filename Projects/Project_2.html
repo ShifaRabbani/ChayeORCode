@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        .container{
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+            margin: 20px;
+        }
+        #height,#width{
+               border: 2px;
+               border-radius: 5px;
+        }
+        button{
+            background-color: green;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        nav{
+             text-align: center;
+            align-items: center;
+            padding-top: 35px;
+        }
+        a{
+            background-color: gray;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            color: black;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <nav>
+    <a href="/" aria-current="page"> Home </a>
+     <a target="_blank" href="https://github.com/ShifaRabbani/ChayeORCode/tree/main">My github Repo</a>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>BMI Calculator</h1>
+        <form>
+            <p><label> Height in CM:</label><input type="text" 
+                 id="height"></p> 
+            <p><label> weight in Kg:</label><input type="text" 
+                 id="width"></p> 
+
+            <button>Calculate</button>
+            <div class="result"></div>
+            <div class="wight_guide">
+                <h3>BMI weight Guide</h3>
+
+                <p>Under wieght = less than 18.6</p>
+                <p>Normal Range = 18.6 and 24.9</p>
+                <p>Overseight = Greater then 24.9</p>
+
+            </div>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      const form = document.querySelector('form')
+    //  const wieght=parseInt(document.querySelector('wieght').value) // if here aces then this will give us an empty value
+    // so we access it after a event Listner to get a vlaues after a submittion
+
+      form.addEventListener('submit',function(e){
+        e.preventDefault( );
+
+     
+     
+     const height=parseFloat(document.querySelector('#height').value)
+     const width=parseFloat(document.querySelector('#width').value)
+     const result=document.querySelector('.result')
+      const wight_guide=document.querySelector('.wight_guide')
+
+        if(height === '' || height< 0 || isNaN(height) ){
+           result.innerHTML=`pleas give us a valid height:${height} `
+
+        }else if(width === '' || width< 0 || isNaN(width) ){
+           result.innerHTML=`pleas give us a valid weight:${width} `
+
+        } 
+          const bmi=  Number(width / ((height*height)/10000)).toFixed(2)
+          //Show the reult 
+          result.innerHTML=`<span>${bmi}</span>`
+        
+    
+      if (bmi < 18.6) {     
+    wight_guide.innerHTML = `<span>BMI ${bmi}: Underweight</span>` 
+} else if (bmi >= 18.6 && bmi <= 24.9) {
+    wight_guide.innerHTML = `<span>BMI ${bmi}: Normal Range</span>` 
+} else if (bmi > 24.9) {
+    wight_guide.innerHTML = `<span>BMI ${bmi}: Overweight</span>` 
+}
+
+      });
+    </script>
+</body>
+</html>
