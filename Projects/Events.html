@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body  style="background-color: #414141; color: #fff;" >
+     <h2>Amazing Images</h2>
+     <ul id="imgs">
+        <li><img width="200px" id="photShop" src="c:\Users\DCC\Pictures\images (2).jfif" 
+            alt="photShop"></li>
+         <li><img width="200px" id="car" src="c:\Users\DCC\Pictures\images (1).jpg"
+             alt=""></li>
+        <li><img width="200px" id="car1" src="c:\Users\DCC\Pictures\futuristic-black-glowing-car-desktop-wallpaper-preview.jpg"
+             alt=""></li>
+             <li><img width="200px" id="car2" src=" c:\Users\DCC\Pictures\images (1).jfif"
+             alt=""></li>
+             <li> <a id="google" style="color: #fff;" href="google.com"> Google </a> </li>
+     </ul> 
+     <script>
+        document.getElementById('car1').onclick= function(){
+            alert("Hello World")
+        }   // best wat to right
+        document.getElementById('car1').addEventListener('click' , function(){
+            alert("Happy New Year")
+        })
+    document.getElementById('car1').addEventListener('click',function(e){
+        console.log(e);
+    } )
+
+    // ************More Reading****************
+    // type, timeStamp , defualtPrevented, target . toElement ,
+    // Source Element , current target
+    // ClintX ClintY , screenX ,screenY
+    // altKey , ctrlKey, KeyCode, ShiftKey
+
+    // ***************** Event Propagation **********
+
+    //**************************** Event Bubblung ******************
+  document.getElementById('imgs').addEventListener('click',function(e){
+        console.log('click inside the ul');
+        
+    } ,false)
+    document.getElementById('car1').addEventListener('click',function(e){
+        console.log(' car1 is clicked');
+        e.stopPropagation();
+    } ,false)
+
+// // ****************** Event Capturing ******************
+document.getElementById('imgs').addEventListener('click',function(e){
+        // console.log('click inside the ul');
+    } ,true)
+    document.getElementById('car1').addEventListener('click',function(e){
+        console.log(' car1 is clicked');
+    } ,true)
+
+
+document.getElementById('google').addEventListener('click' ,function(e){
+e.preventDefault();
+e.stopPropagation()
+console.log('google clilcked');
+    },false)
+
+//             ************************************
+//                           remove a pics
+document.querySelector('#imgs').addEventListener('click', function(e){
+console.log(e.target.tagName);
+if(e.target.tagName === 'IMG'){
+    console.log(e.target.id);
+    
+ let removeIt = e.target.parentNode 
+// removeIt.remove();  // or
+removeIt.parentNode.removeChild(removeIt)
+}
+},false)
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+    <script>
+        setTimeout(function(){
+     console.log("Shfia Rabbani");
+     
+        } ,2000)
+
+ const Sayhi = function(){
+    console.log("Hello"); 
+ }
+ const chnageTxt = function ()
+ {
+    document .querySelector('h1').innerHTML='University of Loralai'}
+ const changeMe=setTimeout(chnageTxt,2000)
+
+const stop = document.querySelector('#stop').
+addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log('Stoped');
+// })
+// ************************Set Intervarl ************
+
+const date= function(str){
+    console.log(str,Date.now());
+    
+const start =document.querySelector('#start').addEventListener('click', function(){
+const intervalId=setInterval(date,1000,"hi")    //also allow 3rd parameter
+console.log('start');
+
+const stop =document.querySelector('#stop').addEventListener('click' , function(){
+clearInterval(intervalId);
+console.log("stop");
+
+})
+},1000)
+}
+date();
+
+    </script>
+</body>
+</html>
