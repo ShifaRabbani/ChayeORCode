@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        margin-top: 50px;
+        }
+     
+   
+    </style>
+    
+</head>
+<body style="background-color: #212121; color: #fff;">
+  
+    <script>
+      const promise1 = new Promise(function(resolve, reject){
+        setTimeout(() => {
+            let erorr =true
+            if(!erorr){
+            resolve({name :"shifa" , age : 22})
+            }else{
+             reject('ERORR: Something went wrong')
+            }
+        }, 1000);
+      }) 
+    async function consumepromise() {
+        try{
+            const response =await promise1
+            console.log(response);
+            
+        }catch
+            (erorr){
+console.log(erorr);
+
+            }
+        
+    }
+consumepromise();
+    </script>
+</body>
+</html>
