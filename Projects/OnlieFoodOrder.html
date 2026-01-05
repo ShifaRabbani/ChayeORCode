@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order</title>
+</head>
+<body>
+    <script>
+       
+         class User {
+            constructor(name, adress,contactNo){
+                this.name = name;
+                this.adress = adress;
+                this.contactNo =contactNo
+            }
+      }
+   
+class Resturant {
+constructor(menu ={ burger : 200 ,chips : 150 ,pizza : 400 }){
+    this.menu = menu;
+}
+order(item){
+    if(!this.menu[item])
+    return null;
+return this.menu[item]
+}
+}
+
+// const user = new User(prompt('Enter Your name'));
+// user.name = User
+
+const name = prompt("Enter Your name")
+console.log("Name:", name);
+const adress= prompt('Enter Your Adress')
+console.log("Home Address" ,adress);
+const contactNo=Number( prompt('Enter Your Contact No'))
+
+
+
+const r = new Resturant();
+const price= r.order (prompt('Order Now burger : 200 ,chips : 150 ,pizza : 400'))
+
+if(price !== null){
+    console.log(`Thanks for Your Order : ${name}.Your Amount is:${price}`);
+}else{
+    console.log('pleas select a valid menu item');
+    
+}
+      
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs</title>
+    
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <script>
+        // oop is a collection of properties and methods
+        // why oop , oop struchure the code
+        // parts of oop (Object literal)(constructor function)(prototype)
+        //(classs) (intences or new, this)
+
+        // ******* object literals ,cllection of properties and methids
+        const user = {
+            userName : 'Sami',
+            loginCount : 9,
+            sighnedOut : true,
+       
+        getUserDetails: function (){
+            //  console.log("Got user detail from data Base");
+            //  console.log(`Username : ${this.userName}`);
+            // console.log(this);
+          }
+         }
+// console.log(user.userName);
+// console.log(user.getUserDetails());
+// console.log(this);
+
+// *************** Contrustor function ************** 
+function User(username , loginCount ,isLoggedIn){
+    this.username = username   // left one is work like a varaible
+    this.loginCount = loginCount
+    this.isLoggedIn = isLoggedIn
+    // return this // not importent it is default
+    this.greeting = function(){
+        console.log(`WellCome ${this.username}` );
+        
+    }
+}
+const user1 = new User("Shifa" , 12, true)
+const user2 =new User("Sohail" , 17, false)
+// every time give us new instance
+console.log(user1);
+console.log(user2);
+
+
+
+    </script>
+</body>
+</html>

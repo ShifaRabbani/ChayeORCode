@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+
+
+    <script>
+        function multipleBy5(num) {
+            return num * 5;
+        }
+        multipleBy5.power = 2;
+        // console.log(multipleBy5(5));
+        // console.log(multipleBy5.power);
+        // console.log(multipleBy5.prototype); // function is also an object
+        //  ***************************
+        function createUser(username, score) {
+            this.username = username  // .this set the correct context and store in new object
+            this.score = score
+        }
+        createUser.prototype.increament = function () {
+            this.score++;
+        }
+        createUser.prototype.printMe = function () {
+            // console.log(`price is ${this.score}`);
+        }
+        const chai = new createUser('chai', 25)
+        const tea = new createUser('tea', 250)
+        chai.printMe()
+        tea.printMe()
+        //    *********************** prototype ********************
+        // let myName = 'shfia    '
+        // let meJs = 'JavaScript          '
+        // console.log(myName.trueLength);
+
+ //                   ***********************
+        let friends = ("Shfia", "LAiba","kainat" , "Mehk")
+        let myHeros= ['Thore','Spiderman']
+        let heroPower={
+            thor: 'hameer',
+            spiderMan : 'sling',
+
+            // Method
+        getSpiderPwer:function(){
+        console.log(`spiderpower is ${this.spiderMan}`);
+        }    
+        } // we can create our own functions and also combine them in other functions or method
+  Object.prototype.shifa= function(){
+    console.log(`Shfia is present in all objects`); 
+  }
+  Array.prototype.arryShifa= function(){
+    console.log("Shfia says Hello");  
+  }
+  Object.prototype.objShfia = function(){
+    console.log("hello world");  
+  }
+    // friends.shifa();
+    // heroPower .shifa();
+    // myHeros.shifa()
+    // myHeros.arryShifa()
+    // heroPower.objShfia()
+    // friends.objShfia()
+     
+       
+    //     ************ Inheritnce ************
+    const user={
+        name : "cai",
+        email : 'chai@google.com'
+    }
+const Teacher = {
+    makeVideo : true
+}
+const TeacherSupport = {
+    isAvailable : false
+}
+const TaSupport= {
+    makeAssigmnet : 'JS Assighmnet',
+    fullTime : true,
+    __proto__: TeacherSupport
+}
+Teacher.__proto__ = user // protyple inheritance
+
+
+
+// Modern syntax
+Object.setPrototypeOf(TeacherSupport, Teacher)
+    //   ***********************
+let anotherUserName = 'chaiOrCode             '
+let thirdUser = '   Hello Wolrd       '
+String.prototype.trueLength =function(){
+    console.log(`${this}`);
+    console.log(` True Length is :${this.trim().length}`);
+
+}
+anotherUserName.trueLength();
+thirdUser.trueLength();
+"Shfia".trueLength()
+"Coofee".trueLength()
+"JavaScript".trueLength()
+
+    </script>
+</body>
+
+</html>
