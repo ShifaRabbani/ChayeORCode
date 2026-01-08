@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>properties</title>
+</head>
+<body style="background-color: black;">
+    <script>
+        class User {
+            constructor(username) {
+                this.username = username
+            }
+            logME(){
+                console.log(`UserName ${this.username}`);
+            }
+        //    static creatId(){   //statis stope the creatId from other access
+            creatId(){
+
+                return `432`
+            }
+         }
+        const shifa = new User ('Shifa')
+        // console.log(shifa.creatId());
+
+
+        class teacher extends User {
+            constructor(username, email){
+                super(username)
+                this.email = email
+            }
+        }
+        const iPhone = new teacher('iPhone','phone@gmail.com')
+        iPhone.logME();
+        console.log(iPhone.creatId());
+        
+        // console.log(iPhone);
+        
+        
+        
+    </script>
+</body>
+</html>

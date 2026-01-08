@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call and this in JS</title>
+</head>
+<body>
+    <script>
+        function SetUserName(username){
+         this.username = username
+         console.log('called');
+         
+        }
+        function createUser (username , email , password){
+            // call the method to hold the refernce and also use this
+            SetUserName.call(this,username)
+          this.email = email
+          this.password = password
+        }
+        const chai = new createUser ('chai' , 'chai@google' ,'321')
+            console.log(chai);
+            
+        
+    </script>
+</body>
+</html>

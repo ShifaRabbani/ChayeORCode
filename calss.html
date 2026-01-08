@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class in JavaScript</title>
+</head>
+<body>
+    <script> 
+class user {
+    constructor(username , email , password) {
+        this.username = username;
+        this.email = email;
+        this.password = password
+    }
+    encyptPassword(){
+        return `${this.password}abc`
+    }
+    changeUserName(){
+        return `${this.username.toUpperCase()}`
+    }
+}
+const chai =new user("chai"," chai@gamail" , "123")
+console.log(chai.encyptPassword());
+console.log(chai.changeUserName());
+
+ behind the seen
+ function user (username , email , password){
+        this.username = username;
+        this.email = email;
+        this.password = password
+ }
+user.prototype.encyptPassword = function (){
+     return `${this.password}abc`
+}
+user.prototype.changeUserName = function (){
+        return `${this.username.toUpperCase()}`
+}
+const tea =new user("tea"," tea@gamail" , "123")
+
+console.log(tea.encyptPassword());
+console.log(tea.changeUserName());
+
+
+//  ************** inhertence ************
+class User{
+    constructor(username){
+     this.username = username
+    }
+    logMe(){
+        console.log(`UserName is ${this.username}`);     
+    }
+}
+class teacher extends User{
+    constructor(username, email , password){
+        super (username)
+     this.email = email
+     this.password = password
+    }
+    addCourse(){
+        console.log(`new course adedd by ${this.username}`);
+        
+    }
+}
+const chai = new teacher('chai' , "chai@yahoo" , "321")
+// chai.addCourse();
+chai.logMe();
+const masalaChai = new User ('masalaChai')
+masalaChai.logMe();
+
+console.log(chai === masalaChai);
+console.log(chai === teacher);
+console.log(chai instanceof teacher);
+console.log(chai instanceof User);
+    </script>
+</body>
+</html>

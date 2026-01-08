@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <button>btn Clicked</button>
+    <script>
+        class react {
+            constructor(){
+                this.library = 'react';
+                this.server = 'HTTTP//:server:300';
+                 // requiremnet 
+                 document.querySelector('button')
+                 .addEventListener('click' , this.handleClick
+                    .bind(this))
+            }
+            handleClick(){
+                console.log('Button Clicked');
+                // console.log(this.server);
+                console.log(this);  
+            }
+        }
+        const app = new react();
+
+//  ***************** MAth object related question *********
+ // its shows that the math .pi value is static and not changeable now we prove that why
+ const discripteor =Object.getOwnPropertyDescriptor(Math , 'PI')
+
+// console.log(discripteor);
+
+
+// console.log(Math.PI);
+//  Math.PI = 45;
+// console.log(Math.PI);
+
+const chai = {
+    name : "green Tea",
+    print : 200,
+    isavailable : true,
+
+    orderChai : function(){
+   console.log('Code phat gaya');
+   
+    }
+}
+console.log(Object.getOwnPropertyDescriptor(chai , "name"));
+Object.defineProperty(chai, 'name' ,{
+    enumerable : true,
+})
+
+console.log(Object.getOwnPropertyDescriptor(chai , "name"));
+
+ for (let [key ,value] of Object.entries(chai)) {
+    if( typeof value !== 'function'){
+console.log(`${key} :${value}`);
+    }
+   
+    
+}
+
+// Object.defineProperty(chai, 'name' ,{
+//     writable : false,
+//     enumerable : false,
+//     configurable : false
+// })
+// console.log(Object.getOwnPropertyDescriptor(chai , "name"));
+
+
+
+
+
+
+    </script>
+</body>
+</html>
